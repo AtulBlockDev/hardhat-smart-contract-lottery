@@ -1,0 +1,4 @@
+yarn hardhat deploy 
+yarn hardhat deployments
+ethers.getContract("Raffle")
+console.log(Raffle.address)
