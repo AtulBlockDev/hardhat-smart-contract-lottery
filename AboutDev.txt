@@ -1,0 +1,3 @@
+Dev: Atulraj Sharma
+Project: Smart Contract Lottery thats uses chainlink VRF and chainlink Automation tools! 
+
