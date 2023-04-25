@@ -49,6 +49,11 @@ module.exports = async({getNamedAccounts, deployments})=>{
         waitConfirmations: network.config.blockConfirmations || 1,
 
     })
+    
+    
+
+
+    
         if (developmentChains.includes(network.name)) {
             const vrfCoordinatorV2Mock = await ethers.getContract(
                 "VRFCoordinatorV2Mock"
@@ -64,6 +69,8 @@ module.exports = async({getNamedAccounts, deployments})=>{
 
     }
     log("_____________________________________")
+
+  
     
 }
 module.exports.tags = ["all", "Raffle"]

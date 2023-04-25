@@ -33,6 +33,10 @@ module.exports = {
             chainId: 31337,
             blockConfirmations: 1,
         },
+        localhost: {
+            chainId: 31337,
+            blockConfirmations: 1,
+        },
 
         goerli: {
             url: RPC_URL,
@@ -40,23 +44,21 @@ module.exports = {
             chainId: 5,
             blockConfirmations: 6,
         },
-      },
-    
+    },
+
     namedAccounts: {
-            deployer: {
-                default: 0,
-            },
-            player: {
-                default: 1,
-            },
+        deployer: {
+            default: 0,
         },
-        etherscan: {
-            apiKey: ETHERSCAN_API,
+        player: {
+            default: 1,
         },
+    },
+    etherscan: {
+        apiKey: ETHERSCAN_API,
+    },
 
-        mocha:{
-            timeout: 9000000,
-        }
-
-    
+    mocha: {
+        timeout: 9000000,
+    },
 }
