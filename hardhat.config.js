@@ -7,8 +7,10 @@ require("solidity-coverage");
 require("hardhat-deploy");
 
 const RPC_URL = process.env.RPC_URL
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
 const ETHERSCAN_API = process.env.ETHERSCAN_API
+const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL
+const SEPOLIA_PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY
 
 
 
@@ -40,8 +42,14 @@ module.exports = {
 
         goerli: {
             url: RPC_URL,
-            accounts: [PRIVATE_KEY],
+            accounts: [GOERLI_PRIVATE_KEY],
             chainId: 5,
+            blockConfirmations: 6,
+        },
+        sepolia: {
+            url: SEPOLIA_RPC_URL,
+            accounts: [SEPOLIA_PRIVATE_KEY],
+            chainId: 11155111,
             blockConfirmations: 6,
         },
     },
